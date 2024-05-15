@@ -13,7 +13,7 @@ export async function getStaticPaths() {
     props: {
       title: item.fields.title,
       content: documentToHtmlString(item.fields.content),
-      date: new Date(item.fields.date),
+      date: new Date(item.fields.date).toLocaleDateString("en-AU"),
     },
   }));
   
